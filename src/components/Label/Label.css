@@ -1,0 +1,108 @@
+.Label {
+  box-sizing: border-box;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 210mm; /* A4 width */
+  height: 148.5mm; /* A4/2 height */
+  position: relative;
+  background-color: white;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label-logo {
+  width: 250px;
+}
+
+.Label-inner {
+  box-sizing: border-box;
+  width: calc(100% - 18mm);
+  height: calc(100% - 18mm);
+  padding: 09px;
+  margin: 09mm;
+  border: 1px solid black; /* Black border inside the label */
+  background-color: white;
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.Header img {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.label-header-right {
+  grid-column: 3;
+  line-height: 0.5;
+  justify-self: start;
+  align-self: start;
+  margin-left: 20px;
+}
+
+.label-header-right p {
+  font-size: 1em;
+}
+
+.label-header-right h1 {
+  font-size: 2.33em;
+  margin-bottom: 7px;
+}
+
+.Company-info {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 1em;
+}
+
+.Label-address {
+  font-size: 1.5em;
+  line-height: 0.2;
+  margin-left: 45px;
+}
+
+.Label-address p {
+  margin-bottom: 8px;
+}
+
+.Label-atn-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Label-atn-details {
+  margin-left: 8px;
+}
+
+.Label-reference {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  line-height: 1;
+  margin: 0 40px;
+  padding: 0;
+}
+
+.Label-reference p {
+  margin: 0;
+}
+
+.Label-aux{
+  font-size: 1em;
+  margin: 5px;
+}
+
+.Label-footer {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  gap: 10px;
+  margin-left: 5px;
+}
