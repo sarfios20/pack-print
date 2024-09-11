@@ -9,10 +9,10 @@ import itemOptions from './itemOptions.json';
 const defaultSerialNumbers = "1241903930, 1241903931, 1241904092, 1241904093";
 
 function App() {
-  const [items, setItems] = useState([{ itemCode: '1401184', itemQuantity: 4, serialNumbers: defaultSerialNumbers }]);
-  const [documentReference, setDocumentReference] = useState('A24020-10');
+  const [items, setItems] = useState([{ itemCode: '1202284', itemQuantity: 4, serialNumbers: defaultSerialNumbers }]);
+  const [documentReference, setDocumentReference] = useState('A22020-10');
   const [deliveryDate, setDeliveryDate] = useState('10.09.2024');
-  const [clientReference, setClientReference] = useState('32150450');
+  const [clientReference, setClientReference] = useState('1215740');
 
   const handleItemChange = (index, newItem) => {
     const updatedItems = [...items];
