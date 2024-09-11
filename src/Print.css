@@ -1,0 +1,56 @@
+@media print {
+  @page {
+    margin: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white !important;
+  }
+
+  .app-container {
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .packing-label-container {
+    page-break-inside: avoid !important;
+    gap: 0 !important; /* Ensure no gap between labels when printing */
+    order: 1 !important; /* Ensure labels are printed first */
+  }
+
+  /* Packing List styles */
+  .packing-list {
+    page-break-before: always !important; 
+    page-break-after: always !important;
+    width: calc(100% - 20mm) !important;
+    height: calc(297mm - 20mm) !important;
+    padding: 0 !important;
+    margin: 10mm auto !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    box-shadow: none !important;
+    order: 2 !important; /* Ensure packing list is printed after labels */
+  }
+
+  /* Label styles */
+  .Label {
+    page-break-inside: avoid !important;
+    width: 100% !important;
+    height: 148.5mm !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide UI components that shouldn't be printed */
+  .input-sidebar,
+  .add-item-button,
+  .print-button {
+    display: none !important;
+  }
+}
