@@ -21,7 +21,7 @@ function App() {
   };
 
   const addItem = () => {
-    setItems([...items, { itemCode: '1401184', itemQuantity: 1, serialNumbers: defaultSerialNumbers }]);
+    setItems([...items, { itemCode: itemOptions[0].code, itemQuantity: 1, serialNumbers: defaultSerialNumbers }]);
   };
 
   const deleteItem = (index) => {

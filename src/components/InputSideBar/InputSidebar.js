@@ -6,11 +6,13 @@ import { ReactComponent as PrintIcon  } from '../../assets/print-icon.svg';
 const InputSidebar = ({ items, onItemChange, addItem, deleteItem, documentReference, setDocumentReference, deliveryDate, setDeliveryDate, clientReference, setClientReference }) => {
 
   const handleDateChange = (e) => {
-    const dateValue = e.target.value; // yyyy-mm-dd
+    const dateValue = e.target.value; // yyyy-mm-dd, or '' when cleared
     const [year, month, day] = dateValue.split('-');
-    const formattedDate = `${day}.${month}.${year}`;
-    setDeliveryDate(formattedDate);
+    setDeliveryDate(dateValue ? `${day}.${month}.${year}` : '');
   };
+
+  // The document shows dd.mm.yyyy; the date input needs yyyy-mm-dd.
+  const inputDate = deliveryDate.split('.').reverse().join('-');
 
   const handlePrint = () => {
     window.print(); 
@@ -42,6 +44,7 @@ const InputSidebar = ({ items, onItemChange, addItem, deleteItem, documentRefere
         <input
           type="date"
           id="deliveryDate"
+          value={inputDate}
           onChange={handleDateChange}
         />
       </div>
